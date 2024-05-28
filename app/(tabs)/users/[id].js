@@ -1,36 +1,32 @@
-import {
-  View,
-  Text,
-  ScrollView,
-  StyleSheet,
-  Dimensions,
-  FlatList,
-  SafeAreaView,
-  Platform,
-} from "react-native";
-import React, { useEffect, useState } from "react";
-import { useLocalSearchParams } from "expo-router";
-import TopTab from "../../component/TopTab";
-import CusText from "../../component/CusText";
-import { Boxes } from "../../component/Carousel";
-import { RecentMatches } from "../../api";
 import { LinearGradient } from "expo-linear-gradient";
-import StickyFooter from "../../component/StickyFooter";
-// import { RewardedAd, RewardedAdEventType, TestIds, BannerAd, BannerAdSize } from 'react-native-google-mobile-ads';
+import { useLocalSearchParams } from "expo-router";
+import React, { useEffect, useState } from "react";
+import {
+  FlatList,
+  Platform,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View
+} from "react-native";
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+import { RecentMatches } from "../../api";
+import { Boxes } from "../../component/Carousel";
+import TopTab from "../../component/TopTab";
 
-// const adUnitId = __DEV__ ? TestIds.REWARDED : 'ca-app-pub-1715488426615455/4262888413';
+// const adUnitId = __DEV__ ? TestIds.REWARDED : 'ca-app-pub-9391344076734991/5903321842';
 
 // const rewarded = RewardedAd.createForAdRequest(adUnitId, {
 //   keywords: ['fashion', 'clothing', 'shoes', 'casual', 'outfit', 'style', 'betting', 'cricket', 'football', 'sports', 'app', 'shoping','food','fantasy'],
 // });
 //   const adUnit = __DEV__
 //     ? TestIds.ADAPTIVE_BANNER
-//     : "ca-app-pub-2940991674659781/5869704858";
+//     : "ca-app-pub-9391344076734991/2103043178";
 
-// const adUnit = __DEV__
-//   ? TestIds.ADAPTIVE_BANNER :
-//   Platform.OS === 'ios' ? 'ca-app-pub-2940991674659781/2834653457'
-//     : "ca-app-pub-2940991674659781/5869704858";
+const adUnit = __DEV__
+  ? TestIds.ADAPTIVE_BANNER :
+  Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/6927994446'
+    : "ca-app-pub-9391344076734991/2103043178";
 
 
 const getCurrentDate = () => {
@@ -107,11 +103,10 @@ const UserPage = () => {
         <SafeAreaView style={{}} />
         <View style={{ paddingTop: 50, width: "100%" }}>
 
-          {/* <BannerAd
-
+          <BannerAd
             unitId={adUnit}
             size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-          /> */}
+          />
         </View>
         <TopTab
           option={option}

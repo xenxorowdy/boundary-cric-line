@@ -1,3 +1,6 @@
+import { LinearGradient } from "expo-linear-gradient";
+import { useLocalSearchParams } from "expo-router";
+import React, { useEffect, useState } from "react";
 import {
   Dimensions,
   Image,
@@ -8,15 +11,10 @@ import {
   Text,
   View,
 } from "react-native";
-import React, { useEffect, useState } from "react";
-import MatchTopHeading from "../component/matchTopHeading";
-import { CusLargeText } from "../utils";
-import { Entypo } from "@expo/vector-icons";
-import { matchPlayerSquadsInfo } from "../api";
-import { useLocalSearchParams } from "expo-router";
+import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { LinearGradient } from "expo-linear-gradient";
-// import { BannerAd, BannerAdSize, RewardedAd, RewardedAdEventType, TestIds } from 'react-native-google-mobile-ads';
+import { matchPlayerSquadsInfo } from "../api";
+import MatchTopHeading from "../component/matchTopHeading";
 
 const Modal = () => {
   const [matchPlayerInfo, setmatchPlayerInfo] = useState([]);
@@ -31,15 +29,13 @@ const Modal = () => {
     callMatchPlayerInfo();
   }, []);
   const { team_a, team_b } = matchPlayerInfo;
-  // const adUnit = __DEV__
-  //   ? TestIds.ADAPTIVE_BANNER :
-  //   Platform.OS === 'ios' ? 'ca-app-pub-2940991674659781/2834653457'
-  //     : "ca-app-pub-2940991674659781/5869704858";
+  const adUnit = __DEV__
+    ? TestIds.ADAPTIVE_BANNER :
+    Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/6927994446'
+      : "ca-app-pub-9391344076734991/2103043178";
 
   return (
-
-    <LinearGradient colors={['#24AEFA', '#FFA26B', '#333433']}  >
-
+    <LinearGradient colors={["#24AEFA", "#FFA26B", "#333433"]}>
       <ScrollView style={styles.scrollView}>
         <SafeAreaProvider style={{ marginVertical: 10 }}>
           <MatchTopHeading
@@ -74,7 +70,11 @@ const Modal = () => {
             <View style={{ marginHorizontal: 10, gap: 10 }}>
               {team_a?.player.map((ele) => (
                 <View
-                  style={{ flexDirection: "row", gap: 20, alignItems: "center" }}
+                  style={{
+                    flexDirection: "row",
+                    gap: 20,
+                    alignItems: "center",
+                  }}
                 >
                   <Image
                     source={{
@@ -121,10 +121,10 @@ const Modal = () => {
               ))}
             </View>
             <View>
-              {/* <BannerAd
+              <BannerAd
                 unitId={adUnit}
                 size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-              /> */}
+              />
               <Text></Text>
             </View>
           </View>

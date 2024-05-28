@@ -15,7 +15,7 @@ function LogoTitle() {
         style={{ width: 35, height: 35, borderRadius: 20 }}
         source={require('../../assets/wallpaper.png')}
       />
-      <CusText style={{ fontSize: 16, fontWeight: 500, color: "#fff" }}>Cricket Boss Live Line</CusText>
+      <CusText style={{ fontSize: 16, fontWeight: 500, color: "#fff" }}>Boundary Line Line</CusText>
     </View>
   );
 }

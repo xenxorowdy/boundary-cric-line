@@ -9,11 +9,11 @@ import HomeNew from "./HomeNew.jsx";
 import _ from "lodash";
 import StickyFooter from "./StickyFooter.jsx";
 
-// import {
-//   BannerAd,
-//   BannerAdSize,
-//   TestIds,
-// } from "react-native-google-mobile-ads";
+import {
+  BannerAd,
+  BannerAdSize,
+  TestIds,
+} from "react-native-google-mobile-ads";
 
 export default function Home({ refresh, setRefresh }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -71,10 +71,10 @@ export default function Home({ refresh, setRefresh }) {
     fetchHomeMatchList();
 
   }, [refresh]);
-  // const adUnitId = __DEV__
-  //   ? TestIds.ADAPTIVE_BANNER :
-  //   Platform.OS === 'ios' ? 'ca-app-pub-2940991674659781/2834653457'
-  //     : "ca-app-pub-2940991674659781/5869704858";
+  const adUnitId = __DEV__
+    ? TestIds.ADAPTIVE_BANNER :
+    Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/6927994446'
+      : "ca-app-pub-9391344076734991/2103043178";
   return (
     <View style={{ flex: 1, height: "100%" }}>
       <TopTab currentIndex={currentIndex} handleChangeTab={handleChangeTab} />
@@ -83,10 +83,10 @@ export default function Home({ refresh, setRefresh }) {
       ) : (
         <BlockBox liveMatch={liveMatch} />
       )}
-      {/* <BannerAd
+      <BannerAd
         unitId={adUnitId}
         size={BannerAdSize.LEADERBOARD}
-      /> */}
+      />
       {currentIndex == 0 && (
         <View>
           <SeriesInfo />

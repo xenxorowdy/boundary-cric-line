@@ -1,4 +1,11 @@
-import { Dimensions, Platform, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  Dimensions,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import React from "react";
 import TopTab from "../component/TopTab";
 import { useState, useEffect } from "react";
@@ -20,25 +27,15 @@ import Venue from "../component/Venue";
 import PlayerTeam from "./playerInfo";
 import Loading from "../Loading";
 import { LinearGradient } from "expo-linear-gradient";
-// import { BannerAd, BannerAdSize, RewardedAd, RewardedAdEventType, TestIds } from 'react-native-google-mobile-ads';
+import { BannerAd, BannerAdSize, RewardedAd, RewardedAdEventType, TestIds } from 'react-native-google-mobile-ads';
 
-// const adUnit = __DEV__
-//   ? TestIds.ADAPTIVE_BANNER :
-//   Platform.OS === 'ios' ? 'ca-app-pub-2940991674659781/2834653457'
-//     : "ca-app-pub-2940991674659781/5869704858";
-
+const adUnit = __DEV__
+  ? TestIds.ADAPTIVE_BANNER :
+  Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/6927994446'
+    : "ca-app-pub-9391344076734991/2103043178";
 
 const SeriesInfo = () => {
-  const option = [
-
-    "Fixtures",
-    "Points Table",
-    "Team Squad",
-
-    "Venues",
-    "News",
-
-  ];
+  const option = ["Fixtures", "Points Table", "Team Squad", "Venues", "News"];
   const { id } = useLocalSearchParams();
 
   const [index, setIndex] = useState(0);
@@ -53,15 +50,14 @@ const SeriesInfo = () => {
   const [loading, setLoading] = useState(true);
   // const adUnitId = __DEV__
   //   ? TestIds.ADAPTIVE_BANNER :
-  //   Platform.OS === 'ios' ? 'ca-app-pub-2940991674659781/2834653457'
-  //     : "ca-app-pub-2940991674659781/5869704858";
+  //   Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/6927994446'
+  //     : "ca-app-pub-9391344076734991/2103043178";
   const handleChangeTab = (data, index = 0) => {
     setIndex(index);
   };
   const getseriesFixture = async () => {
     const data = await getseriesFixtures(id);
     setFixtures(data);
-
   };
   const getponitres = async () => {
     const data = await groupPointsTable(id);
@@ -89,7 +85,7 @@ const SeriesInfo = () => {
     setSquad(data);
   };
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     getseriesFixture();
     getponitres();
     getNewsDetails();
@@ -98,15 +94,13 @@ const SeriesInfo = () => {
     getVenues();
     teamSquad();
     setTimeout(() => {
-      setLoading(false)
+      setLoading(false);
     }, 1000);
   }, [index]);
 
-
-  if (loading) return <Loading />
+  if (loading) return <Loading />;
   return (
-    <LinearGradient colors={['#24AEFA', '#FFA26B', '#333433']}  >
-
+    <LinearGradient colors={["#24AEFA", "#FFA26B", "#333433"]}>
       <ScrollView style={styles.scrollView}>
         <View style={{ justifyContent: "center" }}>
           {/* <BannerAd
@@ -126,10 +120,10 @@ const SeriesInfo = () => {
           {/* {index == 4 && <Text>stats</Text>} */}
           {index == 3 && <Venue item={venues} />}
           {index == 4 && <HomeNew id={news} />}
-          {/* <BannerAd
+          <BannerAd
             unitId={adUnit}
             size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-          /> */}
+          />
           {/* {index == 5 && <Venue data={news} />} */}
         </View>
       </ScrollView>
