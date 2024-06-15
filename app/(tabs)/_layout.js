@@ -13,9 +13,9 @@ function LogoTitle() {
     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 20, width: 340, justifyContent: "flex-start" }} >
       <Image
         style={{ width: 35, height: 35, borderRadius: 20 }}
-        source={require('../../assets/wallpaper.png')}
+        source={require('../../assets/file.png')}
       />
-      <CusText style={{ fontSize: 16, fontWeight: 500, color: "#fff" }}>Boundary Line Line</CusText>
+      <CusText style={{ fontSize: 18, fontWeight: 700, color: "#fff" }}>Notout cricket line</CusText>
     </View>
   );
 }

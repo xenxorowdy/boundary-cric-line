@@ -30,7 +30,7 @@ const NewsComponent = ({ }) => {
   // return <CusText>Loading</CusText>;
   return (
     <ScrollView style={{ backgroundColor: "#24AEFA" }} >
-      <LinearGradient colors={['#24AEFA', '#FFA26B', '#333433']} style={styles.scrollView} >
+      <LinearGradient colors={['#4682B4', '#444444']} style={styles.scrollView} >
         {/* <StickyFooter /> */}
         <Image
           source={{ uri: news?.image || "" }}

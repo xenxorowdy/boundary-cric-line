@@ -60,7 +60,7 @@ const PlayersModal = ({ visible, onClose, playerInfo, teamInfo }) => {
 
         >
             <View style={styles.modalContainer}>
-                <LinearGradient colors={['#02C5A3', '#FFA26B', "24AEFA"]} style={styles.modalContent} >
+                <LinearGradient colors={['#4682B4', '#444444']} style={styles.modalContent} >
                     <View style={styles.modalHeader}>
                         <View style={{ flexDirection: "row", gap: 10, alignItems: "center" }} >
                             <Image source={{ uri: teamInfo.flag }} style={{ width: 26, height: 26, borderRadius: 18, }} />

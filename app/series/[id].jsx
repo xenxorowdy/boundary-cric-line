@@ -100,7 +100,7 @@ const SeriesInfo = () => {
 
   if (loading) return <Loading />;
   return (
-    <LinearGradient colors={["#24AEFA", "#FFA26B", "#333433"]}>
+    <LinearGradient colors={['#4682B4', '#444444']}>
       <ScrollView style={styles.scrollView}>
         <View style={{ justifyContent: "center" }}>
           {/* <BannerAd

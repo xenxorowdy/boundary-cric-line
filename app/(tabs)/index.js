@@ -24,7 +24,7 @@ const HomePage = () => {
   }
 
   return (
-    <LinearGradient colors={['#24AEFA', '#02C5A3', '#FFA26B']} style={styles.linearGradient}>
+    <LinearGradient colors={['#4682B4', '#444444']} style={styles.linearGradient}>
       <ScrollView
         contentContainerStyle={{ paddingBottom: 100 }}
         // scrollEventThrottle={16} // Adjust the throttle as needed

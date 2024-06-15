@@ -63,8 +63,8 @@ const ShowAnimationValue = ({ display = "", mute = false, fontSize = 24 }) => {
     <Text> _ </Text>
   </view>;
   return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
-      {display.toLowerCase().includes('out') && !display.toLowerCase().includes('time') && !display.toLowerCase().includes('not') && !display.toLowerCase().includes('player') &&
+    <View style={{ flexDirection: "row", alignItems: "center", width: "90%", justifyContent: "center" }}>
+      {display.toLowerCase().split(" ").some(ele => ele === 'out') && !display.toLowerCase().includes('time') && !display.toLowerCase().includes('not') && !display.toLowerCase().includes('player') &&
         <Image
           source={require("../../assets/out.png")}
           style={{ width: 60, height: 60 }}
@@ -79,21 +79,21 @@ const ShowAnimationValue = ({ display = "", mute = false, fontSize = 24 }) => {
           source={require("../../assets/Wicket.png")}
           style={{ width: 60, height: 60 }}
         />}
-      {display.toLowerCase().includes('review') &&
+      {display.toLowerCase().includes('rain') &&
         (
           <Image
             source={require("../../assets/umpire.svg")}
-            style={{ width: 60, height: 60 }}
+            style={{ width: 60, height: 60, color: "black" }}
           />
         )
 
       }
-      {display === "Ball Start" &&
+      {display == "Ball Start" &&
         <Image
-          source={require("../../assets/spinning_ball.gif")}
-          style={{ width: 60, height: 60 }}
+          source={require("../../assets/spinig.gif")}
+          style={{ width: 65, height: 110 }}
         />}
-      <Text style={{ color: "#000", fontSize: fontSize, fontWeight: 700 }}>
+      <Text numberOfLines={2} style={{ marginTop: 20, color: "#000", fontSize: fontSize, fontWeight: 600, wrap: true, textAlign: "left", }}>
         {display}
       </Text>
     </View>

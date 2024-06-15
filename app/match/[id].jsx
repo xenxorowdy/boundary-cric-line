@@ -10,7 +10,7 @@ const Match = () => {
   const { id } = useLocalSearchParams();
   const idx = id.split("sep1s@-")[0];
   return (
-    <LinearGradient colors={['#24AEFA', '#FFA26B', '#FFA26B']} style={styles.linearGradient}>
+    <LinearGradient colors={['#4682B4', '#444444']} style={styles.linearGradient}>
       {/* <StickyFooter /> */}
       <ScrollView contentContainerStyle={{ paddingBottom: 100 }} showsVerticalScrollIndicator={false} style={styles.scrollView}>
         <View style={styles.scrollView} >

@@ -97,7 +97,7 @@ const UserPage = () => {
 
   // <ScrollView >
   return (
-    <LinearGradient colors={['#24AEFA', '#FFA26B', '#333433']} style={styles.scrollView} >
+    <LinearGradient colors={['#4682B4', '#444444']} style={styles.scrollView} >
 
       <View style={styles.scrollView}>
         <SafeAreaView style={{}} />

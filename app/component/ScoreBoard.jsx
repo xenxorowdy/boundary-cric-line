@@ -125,13 +125,13 @@ export const ScoreBoradTable = ({
         renderItem={({ item }) => (
           <View style={[styles.rowBox]}>
             <View
-              style={{ textAlign: "left", alignItems: "flex-start", gap: 3, width: "33%" }}
+              style={{ textAlign: "left", alignItems: "flex-start", gap: 3, width: "40%" }}
             >
               <Text
                 style={[
                   styles.TextColor,
                   {
-                    textAlign: "center",
+                    textAlign: "left",
                   },
                 ]}
               >
@@ -233,10 +233,12 @@ export const ScoreBoradTable = ({
         renderItem={({ item }) => (
           <View style={[styles.rowBox]}>
             <Text
+              numberOfLines={1}
               style={[
                 styles.TextColor,
                 {
-                  textAlign: "center",
+                  textAlign: "left",
+                  width: "40%",
                 },
               ]}
             >

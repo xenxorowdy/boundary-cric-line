@@ -35,7 +35,7 @@ const Modal = () => {
       : "ca-app-pub-9391344076734991/2103043178";
 
   return (
-    <LinearGradient colors={["#24AEFA", "#FFA26B", "#333433"]}>
+    <LinearGradient colors={['#4682B4', '#444444']}>
       <ScrollView style={styles.scrollView}>
         <SafeAreaProvider style={{ marginVertical: 10 }}>
           <MatchTopHeading
