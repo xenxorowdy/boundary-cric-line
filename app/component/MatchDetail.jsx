@@ -27,21 +27,21 @@ const matchDetail = [
 ];
 import { useKeepAwake } from "expo-keep-awake";
 
-import { InterstitialAd, AdEventType, TestIds, BannerAd, BannerAdSize, RewardedAd, RewardedAdEventType, } from 'react-native-google-mobile-ads';
+// import { InterstitialAd, AdEventType, TestIds, BannerAd, BannerAdSize, RewardedAd, RewardedAdEventType, } from 'react-native-google-mobile-ads';
 // console.log("hello", Platform.OS)
-const adUnitId = __DEV__
-  ? TestIds.INTERSTITIAL
-  : Platform.OS === "ios"
-    ? "ca-app-pub-2133075463586574/5283386038"
-    : "ca-app-pub-2133075463586574/5904759606";
-const adUnit = __DEV__
-  ? TestIds.ADAPTIVE_BANNER :
-  Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
-    : "ca-app-pub-2133075463586574/2691438757";
+// const adUnitId = __DEV__
+//   ? TestIds.INTERSTITIAL
+//   : Platform.OS === "ios"
+//     ? "ca-app-pub-2133075463586574/5283386038"
+//     : "ca-app-pub-2133075463586574/5904759606";
+// const adUnit = __DEV__
+//   ? TestIds.ADAPTIVE_BANNER :
+//   Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
+//     : "ca-app-pub-2133075463586574/2691438757";
 
-const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
-  keywords: ['fashion', 'clothing', 'shoes', 'casual', 'outfit', 'style', 'betting', 'cricket', 'football', 'sports', 'app', 'shoping']
-});
+// const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
+//   keywords: ['fashion', 'clothing', 'shoes', 'casual', 'outfit', 'style', 'betting', 'cricket', 'football', 'sports', 'app', 'shoping']
+// });
 const MatchDetail = ({ matchId }) => {
   useKeepAwake();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -165,25 +165,25 @@ const MatchDetail = ({ matchId }) => {
   // if (!loaded) {
   //   return null;
   // }
-  const adUnit = __DEV__
-    ? TestIds.ADAPTIVE_BANNER
-    : "ca-app-pub-2133075463586574/2691438757";
+  // const adUnit = __DEV__
+  //   ? TestIds.ADAPTIVE_BANNER
+  //   : "ca-app-pub-2133075463586574/2691438757";
 
-  useEffect(() => {
-    const unsubscribe = interstitial.addAdEventListener(AdEventType.LOADED, () => {
-      setTimeout(() => {
+  // useEffect(() => {
+  //   const unsubscribe = interstitial.addAdEventListener(AdEventType.LOADED, () => {
+  //     setTimeout(() => {
 
-        setIncrem(pre => pre++);
-        interstitial.show()
-      }, 10000);
-    });
+  //       setIncrem(pre => pre++);
+  //       interstitial.show()
+  //     }, 10000);
+  //   });
 
-    //  Start loading the interstitial straight away
-    interstitial.load();
+  //   //  Start loading the interstitial straight away
+  //   interstitial.load();
 
-    //  Unsubscribe from events on unmount
-    return unsubscribe;
-  }, []);
+  //   //  Unsubscribe from events on unmount
+  //   return unsubscribe;
+  // }, []);
   useEffect(() => {
     setLoading(true);
     fetchResult();
@@ -213,12 +213,12 @@ const MatchDetail = ({ matchId }) => {
       {currentIndex === 4 && (
         <PointsTable matchPointsTable={matchPointsTable} />
       )}
-
+      {/* 
 
       <BannerAd
         unitId={adUnit}
         size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-      />
+      /> */}
     </View>
   );
 };

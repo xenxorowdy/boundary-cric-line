@@ -9,13 +9,13 @@ import {
   Text,
   View,
 } from "react-native";
-import {
-  BannerAd,
-  BannerAdSize,
-  RewardedAd,
-  RewardedAdEventType,
-  TestIds,
-} from "react-native-google-mobile-ads";
+// import {
+//   BannerAd,
+//   BannerAdSize,
+//   RewardedAd,
+//   RewardedAdEventType,
+//   TestIds,
+// } from "react-native-google-mobile-ads";
 import { Divider } from "react-native-paper";
 import { checkBGColor, inningsuffix, ratefetch } from "../utils";
 import CusText from "./CusText";
@@ -28,39 +28,39 @@ const option = {
   wicket: "Wicket",
 };
 
-const adUnitId = __DEV__
-  ? TestIds.REWARDED
-  : "ca-app-pub-2133075463586574/5904759606";
+// const adUnitId = __DEV__
+//   ? TestIds.REWARDED
+//   : "ca-app-pub-2133075463586574/5904759606";
 
-const rewarded = RewardedAd.createForAdRequest(adUnitId, {
-  keywords: [
-    "fashion",
-    "clothing",
-    "shoes",
-    "casual",
-    "outfit",
-    "style",
-    "betting",
-    "cricket",
-    "football",
-    "sports",
-    "app",
-    "shoping",
-    "food",
-    "fantasy",
-  ],
-});
+// const rewarded = RewardedAd.createForAdRequest(adUnitId, {
+//   keywords: [
+//     "fashion",
+//     "clothing",
+//     "shoes",
+//     "casual",
+//     "outfit",
+//     "style",
+//     "betting",
+//     "cricket",
+//     "football",
+//     "sports",
+//     "app",
+//     "shoping",
+//     "food",
+//     "fantasy",
+//   ],
+// });
 
 // const adUnit = __DEV__
 //   ? TestIds.ADAPTIVE_BANNER
 //   : "ca-app-pub-2133075463586574/2691438757";
 
 //new one
-const adUnit = __DEV__
-  ? TestIds.ADAPTIVE_BANNER
-  : Platform.OS === "ios"
-    ? "ca-app-pub-2133075463586574/9258290062"
-    : "ca-app-pub-2133075463586574/2691438757";
+// const adUnit = __DEV__
+//   ? TestIds.ADAPTIVE_BANNER
+//   : Platform.OS === "ios"
+//     ? "ca-app-pub-2133075463586574/9258290062"
+//     : "ca-app-pub-2133075463586574/2691438757";
 
 const Live = ({ matchDetail = [] }) => {
   const getValue = async (keyToRetrieve) => {
@@ -74,30 +74,30 @@ const Live = ({ matchDetail = [] }) => {
   const [mute, SetMute] = useState("false");
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    const unsubscribeLoaded = rewarded.addAdEventListener(
-      RewardedAdEventType.LOADED,
-      () => {
-        setLoaded(true);
-        // rewarded.show();
-      }
-    );
-    const unsubscribeEarned = rewarded.addAdEventListener(
-      RewardedAdEventType.EARNED_REWARD,
-      (reward) => {
-        console.log("User earned reward of ", reward);
-      }
-    );
+  // useEffect(() => {
+  //   const unsubscribeLoaded = rewarded.addAdEventListener(
+  //     RewardedAdEventType.LOADED,
+  //     () => {
+  //       setLoaded(true);
+  //       // rewarded.show();
+  //     }
+  //   );
+  //   const unsubscribeEarned = rewarded.addAdEventListener(
+  //     RewardedAdEventType.EARNED_REWARD,
+  //     (reward) => {
+  //       console.log("User earned reward of ", reward);
+  //     }
+  //   );
 
-    // Start loading the rewarded ad straight away
-    rewarded.load();
+  //   // Start loading the rewarded ad straight away
+  //   rewarded.load();
 
-    // Unsubscribe from events on unmount
-    return () => {
-      unsubscribeLoaded();
-      unsubscribeEarned();
-    };
-  }, [loaded]);
+  //   // Unsubscribe from events on unmount
+  //   return () => {
+  //     unsubscribeLoaded();
+  //     unsubscribeEarned();
+  //   };
+  // }, [loaded]);
 
   const handleMute = () => {
     const value = mute == "true" ? "false" : "true";
@@ -495,7 +495,7 @@ const Live = ({ matchDetail = [] }) => {
         )}
         <View style={styles.divider} />
       </View>
-      <BannerAd unitId={adUnit} size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER} />
+      {/* <BannerAd unitId={adUnit} size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER} /> */}
       <View
         style={{
           flexDirection: "column",

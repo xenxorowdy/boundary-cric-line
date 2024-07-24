@@ -5,7 +5,7 @@ import {
   ScrollView,
   StyleSheet
 } from "react-native";
-import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+// import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 import Home from "../component/Home.js";
 
 
@@ -14,10 +14,10 @@ import { LinearGradient } from "expo-linear-gradient";
 const HomePage = () => {
   const [refresh, setRefresh] = useState(true)
   const apiUrl = process.env.EXPO_PUBLIC_API_URL;
-  const adUnitId = __DEV__
-    ? TestIds.ADAPTIVE_BANNER :
-    Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
-      : "ca-app-pub-2133075463586574/2691438757";
+  // const adUnitId = __DEV__
+  //   ? TestIds.ADAPTIVE_BANNER :
+  //   Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
+  //     : "ca-app-pub-2133075463586574/2691438757";
 
   const pullme = () => {
     setRefresh(true)
@@ -36,10 +36,10 @@ const HomePage = () => {
         }
         style={styles.scrollView}>
         <Home refresh={refresh} setRefresh={setRefresh} />
-        <BannerAd
+        {/* <BannerAd
           unitId={adUnitId}
           size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-        />
+        /> */}
       </ScrollView>
 
       {/* <StickyFooter /> */}

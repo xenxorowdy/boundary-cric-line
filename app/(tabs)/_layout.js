@@ -39,13 +39,12 @@ export default function HomeLayout() {
             },
             headerTitle: props => <LogoTitle {...props} />,
           }}
-
         />
         <Tabs.Screen
           name="users/[id]"
           options={{
             headerShown: false,
-            headerTitle: "Upcoming Matches",
+            headerTitle: "Upcomingatches",
             tabBarActiveTintColor: '#11BA8C',
             title: "Upcoming Matches",
             tabBarIcon: ({ color }) => <FontAwesome size={22} name="calendar" color={color} />,

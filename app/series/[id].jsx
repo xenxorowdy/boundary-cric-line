@@ -27,12 +27,12 @@ import Venue from "../component/Venue";
 import PlayerTeam from "./playerInfo";
 import Loading from "../Loading";
 import { LinearGradient } from "expo-linear-gradient";
-import { BannerAd, BannerAdSize, RewardedAd, RewardedAdEventType, TestIds } from 'react-native-google-mobile-ads';
+// import { BannerAd, BannerAdSize, RewardedAd, RewardedAdEventType, TestIds } from 'react-native-google-mobile-ads';
 
-const adUnit = __DEV__
-  ? TestIds.ADAPTIVE_BANNER :
-  Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
-    : "ca-app-pub-2133075463586574/2691438757";
+// const adUnit = __DEV__
+//   ? TestIds.ADAPTIVE_BANNER :
+//   Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
+//     : "ca-app-pub-2133075463586574/2691438757";
 
 const SeriesInfo = () => {
   const option = ["Fixtures", "Points Table", "Team Squad", "Venues", "News"];
@@ -120,10 +120,10 @@ const SeriesInfo = () => {
           {/* {index == 4 && <Text>stats</Text>} */}
           {index == 3 && <Venue item={venues} />}
           {index == 4 && <HomeNew id={news} />}
-          <BannerAd
+          {/* <BannerAd
             unitId={adUnit}
             size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-          />
+          /> */}
           {/* {index == 5 && <Venue data={news} />} */}
         </View>
       </ScrollView>

@@ -9,7 +9,7 @@ import {
   Text,
   View
 } from "react-native";
-import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+// import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 import { RecentMatches } from "../../api";
 import { Boxes } from "../../component/Carousel";
 import TopTab from "../../component/TopTab";
@@ -23,10 +23,10 @@ import TopTab from "../../component/TopTab";
 //     ? TestIds.ADAPTIVE_BANNER
 //     : "ca-app-pub-2133075463586574/2691438757";
 
-const adUnit = __DEV__
-  ? TestIds.ADAPTIVE_BANNER :
-  Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
-    : "ca-app-pub-2133075463586574/2691438757";
+// const adUnit = __DEV__
+//   ? TestIds.ADAPTIVE_BANNER :
+//   Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
+//     : "ca-app-pub-2133075463586574/2691438757";
 
 
 const getCurrentDate = () => {
@@ -103,10 +103,10 @@ const UserPage = () => {
         <SafeAreaView style={{}} />
         <View style={{ paddingTop: 50, width: "100%" }}>
 
-          <BannerAd
+          {/* <BannerAd
             unitId={adUnit}
             size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-          />
+          /> */}
         </View>
         <TopTab
           option={option}

@@ -11,7 +11,7 @@ import {
   Text,
   View,
 } from "react-native";
-import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
+// import { BannerAd, BannerAdSize, TestIds } from 'react-native-google-mobile-ads';
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { matchPlayerSquadsInfo } from "../api";
 import MatchTopHeading from "../component/matchTopHeading";
@@ -29,10 +29,10 @@ const Modal = () => {
     callMatchPlayerInfo();
   }, []);
   const { team_a, team_b } = matchPlayerInfo;
-  const adUnit = __DEV__
-    ? TestIds.ADAPTIVE_BANNER :
-    Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
-      : "ca-app-pub-2133075463586574/2691438757";
+  // const adUnit = __DEV__
+  //   ? TestIds.ADAPTIVE_BANNER :
+  //   Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
+  //     : "ca-app-pub-2133075463586574/2691438757";
 
   return (
     <LinearGradient colors={['#4682B4', '#444444']}>
@@ -121,10 +121,10 @@ const Modal = () => {
               ))}
             </View>
             <View>
-              <BannerAd
+              {/* <BannerAd
                 unitId={adUnit}
                 size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-              />
+              /> */}
               <Text></Text>
             </View>
           </View>
