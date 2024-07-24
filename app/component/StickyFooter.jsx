@@ -3,16 +3,16 @@ import { ScrollView, View, Text, StyleSheet, Platform } from "react-native";
 import { InterstitialAd, AdEventType, TestIds, BannerAd, BannerAdSize, RewardedAd, RewardedAdEventType, } from 'react-native-google-mobile-ads';
 
 const adUnit = __DEV__
-    ? TestIds.ADAPTIVE_BANNER :
-    Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/6927994446'
-        : "ca-app-pub-9391344076734991/2103043178";
+  ? TestIds.ADAPTIVE_BANNER :
+  Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
+    : "ca-app-pub-2133075463586574/2691438757";
 
 const adUnitId = __DEV__ ? TestIds.INTERSTITIAL :
-    Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/2385667098' :
-        'ca-app-pub-9391344076734991/5903321842';
+  Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/5283386038' :
+    'ca-app-pub-2133075463586574/5904759606';
 
 const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
-    keywords: ['fashion', 'clothing', 'shoes', 'casual', 'outfit', 'style', 'betting', 'cricket', 'football', 'sports', 'app', 'shoping']
+  keywords: ['fashion', 'clothing', 'shoes', 'casual', 'outfit', 'style', 'betting', 'cricket', 'football', 'sports', 'app', 'shoping']
 });
 const StickyFooter = () => {
   const [loaded, setLoaded] = useState();
@@ -42,9 +42,9 @@ const StickyFooter = () => {
       <View style={styles.stickyFooter}>
         {/* <Text style={styles.footerText}>Sticky Footer </Text> */}
         <BannerAd
-                    unitId={adUnit}
-                    size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-                />
+          unitId={adUnit}
+          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+        />
         {/* <Text style={styles.footerText}>This is a Sticky Footer</Text> */}
       </View>
     </View>

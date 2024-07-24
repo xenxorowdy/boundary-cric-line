@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "Notout cricket line",
-    "slug": "cricket-live-line",
-    "scheme": "cricket-live-line",
-    "version": "3.1.8",
+    "slug": "boundary-live-line",
+    "scheme": "boundary-live-line",
+    "version": "3.2.5",
     "orientation": "portrait",
-    "icon": "./assets/file.png",
+    "icon": "./assets/wallpaper.png",
     "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/Designer.png",
@@ -17,9 +17,9 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.xenxo.cricketliveline",
+      "bundleIdentifier": "com.riyamjain.boundaryliveline",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/file.png",
+        "foregroundImage": "./assets/wallpaper.png",
         "backgroundColor": "#ffffff"
       }
     },
@@ -29,13 +29,13 @@
         "usesCleartextTraffic": true
       },
       "adaptiveIcon": {
-        "foregroundImage": "./assets/file.png",
+        "foregroundImage": "./assets/wallpaper.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.xenxo.boundaryliveline"
+      "package": "com.riyamjain.boundaryliveline"
     },
     "web": {
-      "favicon": "./assets/file.png"
+      "favicon": "./assets/wallpaper.png"
     },
     "plugins": [
       [
@@ -45,19 +45,20 @@
             "usesCleartextTraffic": true
           }
         }
-      ]
+      ],
+      "expo-router"
     ],
     "extra": {
       "router": {
         "origin": false
       },
       "eas": {
-        "projectId": "9852664e-c11f-47cd-a067-6dab10a6970a"
+        "projectId": "1442f277-e173-41a6-9f06-b7366c561091"
       }
     }
   },
   "react-native-google-mobile-ads": {
-    "android_app_id": "ca-app-pub-9391344076734991~2670019386",
+    "android_app_id": "ca-app-pub-2133075463586574~1148122913",
     "ios_app_id": "ca-app-pub-9391344076734991~8680694274"
   }
 }

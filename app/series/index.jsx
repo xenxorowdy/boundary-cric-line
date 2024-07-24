@@ -81,11 +81,6 @@ const SeriesComp = ({ item }) => (
 export default SeriesInfo;
 
 const styles = StyleSheet.create({
-  divider: {
-    height: 1,
-    width: "100%",
-    backgroundColor: "grey",
-  },
   subTopHeading: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -103,7 +98,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     alignContent: "center",
     marginHorizontal: 1,
-    justifyContent: "center",
     // width: Dimensions.get("screen").width - 20,
   },
   scrollView: {

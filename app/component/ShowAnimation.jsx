@@ -90,8 +90,8 @@ const ShowAnimationValue = ({ display = "", mute = false, fontSize = 24 }) => {
       }
       {display == "Ball Start" &&
         <Image
-          source={require("../../assets/spinig.gif")}
-          style={{ width: 65, height: 110 }}
+          source={require("../../assets/spinning_ball.gif")}
+          style={{ width: 60, height: 60 }}
         />}
       <Text numberOfLines={2} style={{ marginTop: 20, color: "#000", fontSize: fontSize, fontWeight: 600, wrap: true, textAlign: "left", }}>
         {display}

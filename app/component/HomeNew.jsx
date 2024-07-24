@@ -84,7 +84,7 @@ const NewsComp = ({ item }) => (
       />
     </View>
 
-    <View style={{ paddingVertical: 0, gap: 10, paddingVertical: 10, borderRadius: 8, borderColor: 10 }}>
+    <View style={{ gap: 10, paddingVertical: 10, borderRadius: 8, borderColor: 10 }}>
       <CusText
         style={{
           fontWeight: 500,
@@ -119,8 +119,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignContent: "center",
     marginHorizontal: 8,
-
-    justifyContent: "center",
     // width: Dimensions.get("screen").width - 20,
   },
 });

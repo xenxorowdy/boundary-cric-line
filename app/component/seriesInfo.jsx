@@ -100,7 +100,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     alignContent: "center",
     marginHorizontal: 8,
-    justifyContent: "center",
     // width: Dimensions.get("screen").width - 20,
   },
 });

@@ -31,8 +31,8 @@ import { BannerAd, BannerAdSize, RewardedAd, RewardedAdEventType, TestIds } from
 
 const adUnit = __DEV__
   ? TestIds.ADAPTIVE_BANNER :
-  Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/6927994446'
-    : "ca-app-pub-9391344076734991/2103043178";
+  Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
+    : "ca-app-pub-2133075463586574/2691438757";
 
 const SeriesInfo = () => {
   const option = ["Fixtures", "Points Table", "Team Squad", "Venues", "News"];
@@ -50,8 +50,8 @@ const SeriesInfo = () => {
   const [loading, setLoading] = useState(true);
   // const adUnitId = __DEV__
   //   ? TestIds.ADAPTIVE_BANNER :
-  //   Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/6927994446'
-  //     : "ca-app-pub-9391344076734991/2103043178";
+  //   Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
+  //     : "ca-app-pub-2133075463586574/2691438757";
   const handleChangeTab = (data, index = 0) => {
     setIndex(index);
   };
@@ -133,11 +133,6 @@ const SeriesInfo = () => {
 
 export default SeriesInfo;
 const styles = StyleSheet.create({
-  divider: {
-    height: 1,
-    width: "100%",
-    backgroundColor: "grey",
-  },
   subTopHeading: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -155,7 +150,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     alignContent: "center",
     marginHorizontal: 8,
-    justifyContent: "center",
     // width: Dimensions.get("screen").width - 20,
   },
   scrollView: {

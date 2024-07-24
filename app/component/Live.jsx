@@ -30,7 +30,7 @@ const option = {
 
 const adUnitId = __DEV__
   ? TestIds.REWARDED
-  : "ca-app-pub-9391344076734991/5903321842";
+  : "ca-app-pub-2133075463586574/5904759606";
 
 const rewarded = RewardedAd.createForAdRequest(adUnitId, {
   keywords: [
@@ -53,14 +53,14 @@ const rewarded = RewardedAd.createForAdRequest(adUnitId, {
 
 // const adUnit = __DEV__
 //   ? TestIds.ADAPTIVE_BANNER
-//   : "ca-app-pub-9391344076734991/2103043178";
+//   : "ca-app-pub-2133075463586574/2691438757";
 
 //new one
 const adUnit = __DEV__
   ? TestIds.ADAPTIVE_BANNER
   : Platform.OS === "ios"
-  ? "ca-app-pub-9391344076734991/6927994446"
-  : "ca-app-pub-9391344076734991/2103043178";
+    ? "ca-app-pub-2133075463586574/9258290062"
+    : "ca-app-pub-2133075463586574/2691438757";
 
 const Live = ({ matchDetail = [] }) => {
   const getValue = async (keyToRetrieve) => {
@@ -183,7 +183,7 @@ const Live = ({ matchDetail = [] }) => {
                 name="volume-mute-outline"
                 size={24}
                 color="black"
-                style={{ position: "absolute", top: 5, left: 5 }}
+                style={{ position: "absolute", top: 5, left: 5, zIndex: 1 }}
               />
             ) : (
               <Ionicons
@@ -191,7 +191,7 @@ const Live = ({ matchDetail = [] }) => {
                 name="volume-high-outline"
                 size={24}
                 color="black"
-                style={{ position: "absolute", top: 5, left: 5 }}
+                style={{ position: "absolute", top: 5, left: 5, zIndex: 1 }}
               />
             )}
 
@@ -354,7 +354,6 @@ const Live = ({ matchDetail = [] }) => {
           {
             flexDirection: "column",
             gap: 20,
-            borderRadius: 2,
             width: "100%",
             paddingVertical: 10,
             borderRadius: 10,
@@ -390,7 +389,6 @@ const Live = ({ matchDetail = [] }) => {
         style={{
           flexDirection: "column",
           gap: 10,
-          borderRadius: 1,
           width: "100%",
           paddingVertical: 10,
           borderRadius: 10,
@@ -533,7 +531,9 @@ const Live = ({ matchDetail = [] }) => {
                 style={[
                   styles.TextColor,
                   {
-                    textAlign: "center",
+                    textAlign: "left",
+                    width: "40%",
+                    noWrap: true
                   },
                 ]}
               >
@@ -645,13 +645,13 @@ const Live = ({ matchDetail = [] }) => {
 
       <App
         cricketData={parseSessionData(
-          matchDetail?.session?.split("Sessions<br />")?.[1]
+          matchDetail?.session?.split("Sessions<br />")?.[0]
         )}
         cur="1st Inning"
       />
       <App
         cricketData={parseSessionData(
-          matchDetail?.session?.split("Sessions<br />")?.[2]
+          matchDetail?.session?.split("Sessions<br />")?.[1]
         )}
         cur="2nd Inning"
       />

@@ -1,0 +1,63 @@
+{
+    "expo": {
+        "name": "Notout cricket line",
+        "slug": "boundary-live-line",
+        "scheme": "boundary-live-line",
+        "version": "3.1.7",
+        "orientation": "portrait",
+        "icon": "./assets/wallpaper.png",
+        "userInterfaceStyle": "dark",
+        "splash": {
+            "image": "./assets/Designer.png",
+            "resizeMode": "cover",
+            "backgroundColor": "#000000"
+        },
+        "assetBundlePatterns": [
+            "**/*"
+        ],
+        "ios": {
+            "supportsTablet": true,
+            "bundleIdentifier": "com.riyamjain.boundaryliveline",
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/wallpaper.png",
+                "backgroundColor": "#ffffff"
+            }
+        },
+        "android": {
+            "hermesEnabled": true,
+            "config": {
+                "usesCleartextTraffic": true
+            },
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/wallpaper.png",
+                "backgroundColor": "#ffffff"
+            },
+            "package": "com.riyamjain.boundaryliveline"
+        },
+        "web": {
+            "favicon": "./assets/wallpaper.png"
+        },
+        "plugins": [
+            [
+                "expo-build-properties",
+                {
+                    "android": {
+                        "usesCleartextTraffic": true
+                    }
+                }
+            ]
+        ],
+        "extra": {
+            "router": {
+                "origin": false
+            },
+            "eas": {
+                "projectId": "1442f277-e173-41a6-9f06-b7366c561091"
+            }
+        }
+    },
+    "react-native-google-mobile-ads": {
+        "android_app_id": "ca-app-pub-9391344076734991~2670019386",
+        "ios_app_id": "ca-app-pub-9391344076734991~8680694274"
+    }
+}

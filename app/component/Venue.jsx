@@ -87,8 +87,6 @@ const styles = StyleSheet.create({
 
     alignContent: "center",
     marginHorizontal: 8,
-
-    justifyContent: "center",
     // width: Dimensions.get("screen").width - 20,
   },
 });

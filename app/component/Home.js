@@ -73,8 +73,8 @@ export default function Home({ refresh, setRefresh }) {
   }, [refresh]);
   const adUnitId = __DEV__
     ? TestIds.ADAPTIVE_BANNER :
-    Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/6927994446'
-      : "ca-app-pub-9391344076734991/2103043178";
+    Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
+      : "ca-app-pub-2133075463586574/2691438757";
   return (
     <View style={{ flex: 1, height: "100%" }}>
       <TopTab currentIndex={currentIndex} handleChangeTab={handleChangeTab} />

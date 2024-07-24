@@ -14,19 +14,19 @@ import { RecentMatches } from "../../api";
 import { Boxes } from "../../component/Carousel";
 import TopTab from "../../component/TopTab";
 
-// const adUnitId = __DEV__ ? TestIds.REWARDED : 'ca-app-pub-9391344076734991/5903321842';
+// const adUnitId = __DEV__ ? TestIds.REWARDED : 'ca-app-pub-2133075463586574/5904759606';
 
 // const rewarded = RewardedAd.createForAdRequest(adUnitId, {
 //   keywords: ['fashion', 'clothing', 'shoes', 'casual', 'outfit', 'style', 'betting', 'cricket', 'football', 'sports', 'app', 'shoping','food','fantasy'],
 // });
 //   const adUnit = __DEV__
 //     ? TestIds.ADAPTIVE_BANNER
-//     : "ca-app-pub-9391344076734991/2103043178";
+//     : "ca-app-pub-2133075463586574/2691438757";
 
 const adUnit = __DEV__
   ? TestIds.ADAPTIVE_BANNER :
-  Platform.OS === 'ios' ? 'ca-app-pub-9391344076734991/6927994446'
-    : "ca-app-pub-9391344076734991/2103043178";
+  Platform.OS === 'ios' ? 'ca-app-pub-2133075463586574/9258290062'
+    : "ca-app-pub-2133075463586574/2691438757";
 
 
 const getCurrentDate = () => {

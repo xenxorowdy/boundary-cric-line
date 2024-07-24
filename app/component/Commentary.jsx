@@ -31,7 +31,6 @@ const MatchComGuide = ({ data }) => (<View
         backgroundColor: "#FF3939",
         width: 90,
         height: 80,
-        borderRadius: 8,
         alignItems: "center",
         justifyContent: "center",
         borderRadius: 10,
