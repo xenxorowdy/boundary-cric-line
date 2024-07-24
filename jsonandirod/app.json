@@ -3,7 +3,7 @@
         "name": "Notout cricket line",
         "slug": "boundary-live-line",
         "scheme": "boundary-live-line",
-        "version": "3.1.7",
+        "version": "3.2.5",
         "orientation": "portrait",
         "icon": "./assets/wallpaper.png",
         "userInterfaceStyle": "dark",
@@ -45,7 +45,8 @@
                         "usesCleartextTraffic": true
                     }
                 }
-            ]
+            ],
+            "expo-router"
         ],
         "extra": {
             "router": {
@@ -57,7 +58,7 @@
         }
     },
     "react-native-google-mobile-ads": {
-        "android_app_id": "ca-app-pub-9391344076734991~2670019386",
+        "android_app_id": "ca-app-pub-2133075463586574~1148122913",
         "ios_app_id": "ca-app-pub-9391344076734991~8680694274"
     }
 }
