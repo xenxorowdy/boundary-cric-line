@@ -1,0 +1,6 @@
+module Pods_Notoutcricketline {
+  umbrella header "Pods-Notoutcricketline-umbrella.h"
+
+  export *
+  module * { export * }
+}
