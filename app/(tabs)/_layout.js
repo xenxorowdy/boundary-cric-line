@@ -1,12 +1,13 @@
-import { Slot, Stack, Tabs } from "expo-router";
-import {
-  createMaterialTopTabNavigator,
-  MaterialTopTabBar,
-  MaterialTopTabNavigationEventMap,
-} from "@react-navigation/material-top-tabs";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import {
+  createMaterialTopTabNavigator
+} from "@react-navigation/material-top-tabs";
+import * as Notifications from 'expo-notifications';
+import { router, Tabs } from "expo-router";
 import { Image, View } from "react-native";
 import CusText from "../component/CusText";
+import { useEffect } from 'react';
+
 const { Navigator } = createMaterialTopTabNavigator();
 function LogoTitle() {
   return (
@@ -19,7 +20,39 @@ function LogoTitle() {
     </View>
   );
 }
+
+function useNotificationObserver() {
+  useEffect(() => {
+    let isMounted = true;
+
+    function redirect(notification) {
+      const url = notification.request.content.data?.url;
+      if (url) {
+        router.push(url);
+      }
+    }
+
+    Notifications.getLastNotificationResponseAsync()
+      .then(response => {
+        if (!isMounted || !response?.notification) {
+          return;
+        }
+        redirect(response?.notification);
+      });
+
+    const subscription = Notifications.addNotificationResponseReceivedListener(response => {
+      redirect(response.notification);
+    });
+
+    return () => {
+      isMounted = false;
+      subscription.remove();
+    };
+  }, []);
+}
+
 export default function HomeLayout() {
+  useNotificationObserver();
   return (
     <>
       <Tabs>

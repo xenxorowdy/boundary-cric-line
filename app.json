@@ -32,7 +32,8 @@
         "foregroundImage": "./assets/wallpaper.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.riyamjain.boundaryliveline"
+      "package": "com.riyamjain.boundaryliveline",
+      "googleServicesFile": "./android/app/google-services.json"
     },
     "web": {
       "favicon": "./assets/wallpaper.png"
@@ -42,18 +43,27 @@
         "expo-build-properties",
         {
           "android": {
-            "usesCleartextTraffic": true
-          }
+            "usesCleartextTraffic": true,
+            "useNextNotificationsApi": true
+          },
+          "icon": "./assets/file.png",
+          "color": "#ffffff",
+          "defaultChannel": "default",
+          "sounds": [
+            "./assets/notification-sound.wav"
+          ]
         }
       ],
-      "expo-router"
+      "expo-router",
+      "expo-notifications"
     ],
     "extra": {
       "router": {
         "origin": false
       },
       "eas": {
-        "projectId": "1442f277-e173-41a6-9f06-b7366c561091"
+        "projectId": "1442f277-e173-41a6-9f06-b7366c561091",
+        "": ""
       }
     }
   },
