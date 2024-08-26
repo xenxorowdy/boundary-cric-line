@@ -32,7 +32,8 @@
         "foregroundImage": "./assets/wallpaper.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.riyamjain.boundaryliveline"
+      "package": "com.riyamjain.boundaryliveline",
+      "googleServicesFile": "./android/app/google-services.json"
     },
     "web": {
       "favicon": "./assets/wallpaper.png"
@@ -43,11 +44,16 @@
         {
           "android": {
             "usesCleartextTraffic": true,
-            "versionCode": 3
-          }
+            "useNextNotificationsApi": true,
+            "versionCode": 5
+          },
+          "icon": "./assets/file.png",
+          "color": "#ffffff",
+          "defaultChannel": "default"
         }
       ],
-      "expo-router"
+      "expo-router",
+      "expo-notifications"
     ],
     "extra": {
       "router": {
