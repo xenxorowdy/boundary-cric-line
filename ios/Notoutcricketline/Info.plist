@@ -25,7 +25,7 @@
     <key>CFBundleURLTypes</key>
     <array>
       <dict>
-        <key>CFBundleURLSchemes</key>
+        <key>CFBundleURLS chemes</key>
         <array>
           <string>cricket-live-line</string>
           <string>com.xenxo.cricketliveline</string>
