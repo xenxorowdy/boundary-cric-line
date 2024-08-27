@@ -44,7 +44,7 @@ if (getRNMinorVersion() >= 75) {
   }
 }
 
-rootProject.name = 'Notoutcricketline'
+rootProject.name = 'Notout cricket line'
 
 dependencyResolutionManagement {
   versionCatalogs {

@@ -42,11 +42,6 @@
       [
         "expo-build-properties",
         {
-          "android": {
-            "usesCleartextTraffic": true,
-            "useNextNotificationsApi": true,
-            "versionCode": 5
-          },
           "icon": "./assets/file.png",
           "color": "#ffffff",
           "defaultChannel": "default"
