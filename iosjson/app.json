@@ -45,7 +45,9 @@
                         "usesCleartextTraffic": true
                     }
                 }
-            ]
+            ],
+            "expo-router",
+            "expo-notifications"
         ],
         "extra": {
             "router": {

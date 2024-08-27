@@ -3,7 +3,7 @@
     "name": "Notout cricket line",
     "slug": "cricket-live-line",
     "scheme": "cricket-live-line",
-    "version": "3.2.5",
+    "version": "3.2.6",
     "orientation": "portrait",
     "icon": "./assets/file.png",
     "userInterfaceStyle": "dark",
@@ -42,10 +42,18 @@
         "expo-build-properties",
         {
           "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "buildToolsVersion": "34.0.0",
             "usesCleartextTraffic": true
+          },
+          "ios": {
+            "deploymentTarget": "14.0"
           }
         }
-      ]
+      ],
+      "expo-notifications",
+      "expo-router"
     ],
     "extra": {
       "router": {
