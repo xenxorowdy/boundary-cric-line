@@ -25,7 +25,7 @@
     <key>CFBundleURLTypes</key>
     <array>
       <dict>
-        <key>CFBundleURLS chemes</key>
+        <key>CFBundleURLSchemes</key>
         <array>
           <string>cricket-live-line</string>
           <string>com.xenxo.cricketliveline</string>
@@ -46,7 +46,7 @@
     <dict>
       <key>NSAllowsArbitraryLoads</key>
       <false/>
-         <key>NSExceptionDomains</key>
+      <key>NSExceptionDomains</key>
       <dict>
         <key>apicricketchampion.in</key>
         <dict>
@@ -70,6 +70,7 @@
     <string>Allow $(PRODUCT_NAME) to access your microphone</string>
     <key>NSUserActivityTypes</key>
     <array>
+      <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
       <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
       <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
     </array>

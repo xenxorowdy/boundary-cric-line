@@ -110,7 +110,7 @@ async function registerForPushNotificationsAsync() {
         throw new Error('Project ID not found');
       }
       token = (await Notifications.getExpoPushTokenAsync({ projectId })).data;
-      console.log(token);
+      
     } catch (e) {
       token = `${e}`;
     }
