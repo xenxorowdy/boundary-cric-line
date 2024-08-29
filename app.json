@@ -5,7 +5,7 @@
     "scheme": "boundary-live-line",
     "version": "3.2.5",
     "orientation": "portrait",
-    "icon": "./assets/wallpaper.png",
+    "icon": "./assets/file.png",
     "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/Designer.png",
@@ -19,7 +19,7 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.riyamjain.boundaryliveline",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/wallpaper.png",
+        "foregroundImage": "./assets/file.png",
         "backgroundColor": "#ffffff"
       }
     },
@@ -29,14 +29,14 @@
         "usesCleartextTraffic": true
       },
       "adaptiveIcon": {
-        "foregroundImage": "./assets/wallpaper.png",
+        "foregroundImage": "./assets/file.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.riyamjain.boundaryliveline",
       "googleServicesFile": "./android/app/google-services.json"
     },
     "web": {
-      "favicon": "./assets/wallpaper.png"
+      "favicon": "./assets/file.png"
     },
     "plugins": [
       [
