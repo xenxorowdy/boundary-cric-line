@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
-import { Text, View, Button, Platform } from 'react-native';
+import Constants from 'expo-constants';
 import * as Device from 'expo-device';
 import * as Notifications from 'expo-notifications';
-import Constants from 'expo-constants';
+import { useEffect, useRef, useState } from 'react';
+import { Platform } from 'react-native';
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -12,6 +12,22 @@ Notifications.setNotificationHandler({
   }),
 });
 
+const addNotification = (token) => {
+
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  const raw = JSON.stringify({
+    "id": token
+  });
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+  };
+  fetch("https://notification-ma1e.onrender.com/add/notification", requestOptions).then((res) => res.json).then(res => console.log(res)).catch((e) => console.error(e));
+}
+
 export default function Notification() {
   const [expoPushToken, setExpoPushToken] = useState('');
   const [channels, setChannels] = useState([]);
@@ -20,7 +36,7 @@ export default function Notification() {
   const responseListener = useRef();
 
   useEffect(() => {
-    registerForPushNotificationsAsync().then(token => token && setExpoPushToken(token));
+    registerForPushNotificationsAsync().then(token => token && addNotification(token));
 
     if (Platform.OS === 'android') {
       Notifications.getNotificationChannelsAsync().then(value => setChannels(value || []));
@@ -40,7 +56,7 @@ export default function Notification() {
         Notifications.removeNotificationSubscription(responseListener.current);
     };
   }, []);
-  return <View ></View>
+  return;
 }
 
 async function schedulePushNotification() {
@@ -87,7 +103,6 @@ async function registerForPushNotificationsAsync() {
         throw new Error('Project ID not found');
       }
       token = (await Notifications.getExpoPushTokenAsync({ projectId })).data;
-      console.log(token);
     } catch (e) {
       token = `${e}`;
     }

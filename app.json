@@ -3,7 +3,7 @@
     "name": "Notout cricket line",
     "slug": "boundary-live-line",
     "scheme": "boundary-live-line",
-    "version": "3.2.5",
+    "version": "3.2.7",
     "orientation": "portrait",
     "icon": "./assets/file.png",
     "userInterfaceStyle": "dark",

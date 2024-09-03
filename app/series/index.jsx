@@ -1,20 +1,18 @@
+import { AntDesign } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
+import React, { useEffect, useState } from "react";
 import {
   Dimensions,
-  StyleSheet,
-  Text,
-  View,
   FlatList,
-  Pressable,
-  TouchableOpacity,
-  ScrollView,
   Image,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+  View
 } from "react-native";
-import React, { useEffect, useState } from "react";
 import { seriesList } from "../api";
-import { AntDesign } from "@expo/vector-icons";
-import { Link, router } from "expo-router";
 import CusText from "../component/CusText";
-import { LinearGradient } from "expo-linear-gradient";
 const SeriesInfo = () => {
   const [seriesData, setSeriesData] = useState();
   const getSeriesList = async () => {

@@ -1,9 +1,8 @@
-import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
-import React from "react";
-import { useLocalSearchParams } from "expo-router";
-import MatchDetail from "../component/MatchDetail";
 import { LinearGradient } from "expo-linear-gradient";
-import StickyFooter from "../component/StickyFooter";
+import { useLocalSearchParams } from "expo-router";
+import React from "react";
+import { ScrollView, StyleSheet, View } from "react-native";
+import MatchDetail from "../component/MatchDetail";
 
 const Match = () => {
 
